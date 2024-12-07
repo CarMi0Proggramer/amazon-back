@@ -27,8 +27,8 @@ export class PaymentService {
       }),
       mode: 'payment',
       payment_method_types: ['card'],
-      success_url: 'http://localhost:4200/payment/success',
-      cancel_url: 'http://localhost:4200/',
+      success_url: 'https://amazon-front-gamma.vercel.app/payment/success',
+      cancel_url: 'https://amazon-front-gamma.vercel.app/',
     });
 
     if (!result.url) {
