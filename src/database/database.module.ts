@@ -9,7 +9,7 @@ import { envs } from 'src/config/envs';
       type: 'postgres',
       url: envs.db.url,
       ssl: true,
-      entities: [path.join(__dirname, 'src/entities/*.entity{.ts,.js}')],
+      entities: [path.join(__dirname, '../entities/*.{.ts,.js}')],
       synchronize: true,
       logging: true,
     }),
