@@ -1,13 +1,14 @@
 import { Injectable, InternalServerErrorException } from '@nestjs/common';
 import { CheckoutDto } from './dto/checkout.dto';
 import Stripe from 'stripe';
+import { envs } from 'src/config/envs';
 
 @Injectable()
 export class PaymentService {
   stripe;
 
   constructor() {
-    this.stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string);
+    this.stripe = new Stripe(envs.stripe.secretKey);
   }
 
   async checkout(checkoutDto: CheckoutDto): Promise<{ checkoutUrl: string }> {
