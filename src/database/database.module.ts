@@ -3,15 +3,13 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import * as path from 'node:path';
 import { envs } from 'src/config/envs';
 
-console.log(path.join(__dirname, '../entities/*.{.ts,.js}'));
-
 @Module({
   imports: [
     TypeOrmModule.forRoot({
       type: 'postgres',
       url: envs.db.url,
       ssl: true,
-      entities: [path.join(__dirname, '../entities/*.{.ts,.js}')],
+      entities: [path.join(__dirname, '../entities/*.{ts,js}')],
       synchronize: true,
       logging: true,
     }),
