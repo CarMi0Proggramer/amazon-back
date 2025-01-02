@@ -3,6 +3,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import * as path from 'node:path';
 import { envs } from 'src/config/envs';
 
+console.log(path.join(__dirname, '../entities/*.{.ts,.js}'));
+
 @Module({
   imports: [
     TypeOrmModule.forRoot({
