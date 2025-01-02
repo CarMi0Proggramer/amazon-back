@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import * as path from 'node:path';
-import { envs } from '../config/envs';
+import { envs } from 'src/config/envs';
 
 @Module({
   imports: [
@@ -9,7 +9,7 @@ import { envs } from '../config/envs';
       type: 'postgres',
       url: envs.db.url,
       ssl: true,
-      entities: [path.join(__dirname, '../entities/*.entity{.ts,.js}')],
+      entities: [path.join(__dirname, 'src/entities/*.entity{.ts,.js}')],
       synchronize: true,
       logging: true,
     }),

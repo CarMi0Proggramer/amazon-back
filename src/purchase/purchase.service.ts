@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Purchase } from '../entities/Purchase';
-import { PurchaseProductService } from '../purchase-product/purchase-product.service';
+import { Purchase } from 'src/entities/Purchase';
+import { PurchaseProductService } from 'src/purchase-product/purchase-product.service';
 import { Repository } from 'typeorm';
 import { SavePurchaseDto } from './dto/save-purchase.dto';
 
