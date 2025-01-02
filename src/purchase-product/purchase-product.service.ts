@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { CreatePurchaseProductDto } from './dto/create-purchase-product.dto';
 import { InjectRepository } from '@nestjs/typeorm';
-import { PurchaseProduct } from 'src/entities/PurchaseProduct';
+import { PurchaseProduct } from '../entities/PurchaseProduct';
 import { Repository } from 'typeorm';
 
 @Injectable()

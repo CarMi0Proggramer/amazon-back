@@ -1,7 +1,7 @@
 import { Injectable, InternalServerErrorException } from '@nestjs/common';
 import { CheckoutDto } from './dto/checkout.dto';
 import Stripe from 'stripe';
-import { envs } from 'src/config/envs';
+import { envs } from '../config/envs';
 
 @Injectable()
 export class PaymentService {

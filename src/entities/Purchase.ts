@@ -1,4 +1,4 @@
-import { NumericColumnTransformer } from 'src/common/utils/numeric-column-transformer';
+import { NumericColumnTransformer } from '../common/utils/numeric-column-transformer';
 import {
   Column,
   Entity,
@@ -21,6 +21,9 @@ export class Purchase {
   })
   total: number;
 
-  @OneToMany(() => PurchaseProduct, (purchaseProduct) => purchaseProduct.purchase)
+  @OneToMany(
+    () => PurchaseProduct,
+    (purchaseProduct) => purchaseProduct.purchase,
+  )
   purchaseProducts: Relation<PurchaseProduct[]>;
 }

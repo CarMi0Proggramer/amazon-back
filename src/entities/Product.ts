@@ -1,4 +1,4 @@
-import { NumericColumnTransformer } from 'src/common/utils/numeric-column-transformer';
+import { NumericColumnTransformer } from '../common/utils/numeric-column-transformer';
 import {
   Column,
   Entity,
